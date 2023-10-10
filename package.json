@@ -1,0 +1,17 @@
+{
+  "name": "graphql-apollo-server",
+  "version": "1.0.0",
+  "description": "Sample server utilizing GraphQL and Apollo server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Edward Golez",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.12.1",
+    "graphql": "^16.8.1",
+    "nodemon": "^3.0.1"
+  }
+}
