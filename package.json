@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "Sample server utilizing GraphQL and Apollo server",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
+    "compile": "tsc",
+    "start": "yarn compile && node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Paul Edward Golez",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^3.12.1",
+    "@apollo/server": "^4.9.4",
+    "@types/node": "^20.8.4",
     "graphql": "^16.8.1",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
   }
 }
