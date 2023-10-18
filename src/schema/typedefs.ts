@@ -3,7 +3,8 @@ export const typeDefs = `#graphql
     id: ID
     firstName: String
     lastName: String
-    status: String
+    status: String,
+    favoriteBookIds: [Int!]
   }
 
   type Query {
