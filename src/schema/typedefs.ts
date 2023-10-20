@@ -17,7 +17,7 @@ export const typeDefs = `#graphql
     patrons: [Patron!]
     patron(id: ID!): Patron
     books: [Book!],
-    book: Book
+    book(id: ID!): Book
   }
 
   enum PatronStatus {
