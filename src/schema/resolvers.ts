@@ -22,6 +22,15 @@ export const resolvers = {
 
       return patron;
     },
+    addBookToPatron: (_parent, args) => {
+      const { patronId, bookId } = args.input;
+      const patron = patrons.find((p) => (p.id == patronId));
+      const book = books.find((b) => b.id == bookId);
+
+      patron.favoriteBookIds.push(parseInt(bookId))
+
+      return patron;
+    },
   },
   Patron: {
     favoriteBooks: (parent) => {

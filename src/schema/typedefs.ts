@@ -22,6 +22,7 @@ export const typeDefs = `#graphql
 
   type Mutation {
     createPatron(input: CreatePatronInput!): Patron!
+    addBookToPatron(input: AddBookToPatronInput!): Patron!
   }
 
   enum PatronStatus {
@@ -33,5 +34,10 @@ export const typeDefs = `#graphql
     firstName: String!,
     lastName: String!,
     status: PatronStatus = ACTIVE
+  }
+
+  input AddBookToPatronInput {
+    patronId: ID!,
+    bookId: ID!
   }
 `;
