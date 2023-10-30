@@ -20,8 +20,18 @@ export const typeDefs = `#graphql
     book(id: ID!): Book
   }
 
+  type Mutation {
+    createPatron(input: CreatePatronInput!): Patron!
+  }
+
   enum PatronStatus {
     ACTIVE
     INACTIVE
+  }
+
+  input CreatePatronInput {
+    firstName: String!,
+    lastName: String!,
+    status: PatronStatus = ACTIVE
   }
 `;

@@ -9,8 +9,19 @@ export const resolvers = {
     },
     books: () => books,
     book: (_parent, args) => {
-      return books.find((b) => b.id == args.id)
-    }
+      return books.find((b) => b.id == args.id);
+    },
+  },
+  Mutation: {
+    createPatron: (_parent, args) => {
+      const patron = args.input;
+      patron.id = patrons.length + 1;
+      patron.favoriteBookIds = [];
+      patrons.push(patron);
+      console.log({ patron });
+
+      return patron;
+    },
   },
   Patron: {
     favoriteBooks: (parent) => {
